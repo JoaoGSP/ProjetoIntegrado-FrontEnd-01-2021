@@ -24,7 +24,7 @@ const Menu = () => {
                         <Nav className="text-center" activeKey="/home">
                             <Row>
                                 <Col>
-                                <Card className="bg-success"border="primary">
+                                <Card className="bg-success"border="dark">
                                     <Nav.Item>
                                         <Nav.Link eventKey="2" as={Link} to="/legislaturas">
                                             Legislaturas
@@ -33,7 +33,7 @@ const Menu = () => {
                                 </Card>
                                 </Col>
                                 <Col>
-                                <Card className="bg-success"border="primary">
+                                <Card className="bg-success"border="dark">
                                     <Nav.Item>
                                         <Nav.Link eventKey="1" as={Link} to="/deputados">
                                             Deputados
@@ -42,7 +42,7 @@ const Menu = () => {
                                     </Card>
                                 </Col>
                                 <Col>
-                                <Card className="bg-success"border="primary">
+                                <Card className="bg-success"border="dark">
                                     <Nav.Item>
                                         <Nav.Link eventKey="3" as={Link} to="/partidos">
                                             Partidos
