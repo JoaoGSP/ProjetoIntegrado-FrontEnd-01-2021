@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FaPlus } from 'react-icons/fa'
-import { Container, Row, Table } from 'react-bootstrap'
+import { Card, Row, Table } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 import apiLegislaturas from '../../services/Legislaturas/apiLegislaturas'
 
@@ -17,8 +17,7 @@ const Legislaturas = () => {
 
     return (
         <>
-            <Container>
-
+            <Card>
                 <Row xs={1} md={4} className="g-4">
                     <Table className="text-center" striped bordered hover variant="dark">
                         <thead>
@@ -38,7 +37,7 @@ const Legislaturas = () => {
                                     <td>
                                         <div className="text-center" position="relative">
                                             <Link to={"/mesadiretora/" + legislatura.id} className=" btn btn-outline-info ">
-                                                <FaPlus /> {' '} Ver informações
+                                                <FaPlus /> {' '} Ver composição da Mesa
                                             </Link >
                                         </div>
                                     </td>
@@ -47,7 +46,7 @@ const Legislaturas = () => {
                         ))}
                     </Table>
                 </Row>
-            </Container>
+            </Card>
         </>
     )
 }

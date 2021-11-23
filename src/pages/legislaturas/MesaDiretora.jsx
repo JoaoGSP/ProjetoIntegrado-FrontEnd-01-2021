@@ -16,6 +16,7 @@ const MesaDiretora = ({ match }) => {
 
     return (
         <>
+        <Card>
             <Row xs={1} md={4} className="g-4">
                 {mesadiretora.map((deputado, idx) => (
                     <Col>
@@ -34,6 +35,7 @@ const MesaDiretora = ({ match }) => {
                     </Col>
                 ))} 
             </Row> 
+        </Card>
         </>
     )
 }

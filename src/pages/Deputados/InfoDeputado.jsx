@@ -1,14 +1,22 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Row, Col, Image, ListGroup, Container } from 'react-bootstrap'
+import { mask } from 'remask'
+import { Card, Row, Col, Image, ListGroup, Container, Button, Modal, Alert } from 'react-bootstrap'
 import { FaPlus } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import apiDeputados from '../../services/Deputados/apiDeputados'
+import { AiFillFacebook, AiFillInstagram, AiOutlineMail } from 'react-icons/ai'
+import { BsFillTelephoneFill } from 'react-icons/bs'
+import InfoInstagram from '../../elements/InfoInstagram.jsx'
+import InfoFacebook from '../../elements/InfoFacebook.jsx'
 
 const InfoDeputado = ({ match }) => {
     const [infodeputado, setInfoDeputado] = useState([])
     const [redesocial, setRedeSocial] = useState([])
     const [status, setStatus] = useState([])
     const [gabinete, setGabinete] = useState([])
+
+    const pattern = '999.999.999-99' 
+
 
     useEffect(() => {
 
@@ -26,14 +34,14 @@ const InfoDeputado = ({ match }) => {
             <Card fluid>
                 <Card.Body>
                     <Row>
-                        <Col xs={2} className='text-center'>
+                        <Col xs={3} className='text-center'>
                             <Image src={status.urlFoto} thumbnail />
                             <ListGroup as="ul">
                                 <ListGroup.Item as="li" active>Contatos</ListGroup.Item>
-                                <ListGroup.Item as="li">{redesocial[0]}</ListGroup.Item>
-                                <ListGroup.Item as="li">{redesocial[1]}</ListGroup.Item>
-                                <ListGroup.Item as="li">{status.email}</ListGroup.Item>
-                                <ListGroup.Item as="li">{gabinete.telefone}</ListGroup.Item>
+                                {redesocial[0]?<Button href={redesocial[0]}><AiFillFacebook/></Button>:<InfoFacebook />}
+                                {redesocial[1]?<Button className="btn btn-color-#DD2A7B" href={redesocial[1]}><AiFillInstagram/></Button>:<InfoInstagram />}
+                                <ListGroup.Item as="li"><AiOutlineMail/> {' '} {status.email}{gabinete.telefone}</ListGroup.Item>
+                                <ListGroup.Item as="li"><BsFillTelephoneFill/>{' '} {gabinete.telefone}</ListGroup.Item>
                             </ListGroup>
                         </Col>
                         <Col>

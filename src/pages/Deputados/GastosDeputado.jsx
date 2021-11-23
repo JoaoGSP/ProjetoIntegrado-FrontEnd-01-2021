@@ -54,7 +54,7 @@ const GastosDeputado = ({ match }) => {
                                 <ListGroup.Item variant="primary">Valor do Documento: R$ {infoGasto.valorDocumento}</ListGroup.Item>
                                 <ListGroup.Item variant="primary">Valor liquido: R$ {infoGasto.valorLiquido}</ListGroup.Item>
                                 <ListGroup.Item variant="primary">Parcela: {infoGasto.parcela === 0 ? 'Pago a vista' : infoGasto.parcela}</ListGroup.Item>
-                                {infoGasto.urlDocumento ? <ListGroup.Item className='text-center' variant="primary"><Button href={infoGasto.urlDocumento || "#"} variant=" btn btn-outline-info ">
+                                {infoGasto.urlDocumento ? <ListGroup.Item className='text-center' variant="primary"><Button href={infoGasto.urlDocumento} variant=" btn btn-outline-info ">
                                     <FaPlus /> {' '} Ver Documento
                                 </Button ></ListGroup.Item> : <ListGroup.Item className='text-center' variant="danger">Documento indisponivel</ListGroup.Item>}
                             </ListGroup>

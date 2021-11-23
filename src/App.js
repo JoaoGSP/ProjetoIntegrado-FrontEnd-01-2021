@@ -7,7 +7,6 @@ import Menu from './elements/Menu';
 function App() {
   return (
     <>
-    
       <BrowserRouter>
       <Menu/>
       <Rotas/>

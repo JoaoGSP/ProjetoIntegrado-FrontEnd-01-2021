@@ -18,6 +18,7 @@ const Deputados = () => {
     console.log(deputados);
     return (
         <>
+        <Card>
             <Row xs={1} md={4} className="g-4">
                 {deputados.map((deputado, idx) => (
                     <Col>
@@ -40,6 +41,7 @@ const Deputados = () => {
                     </Col>
                 ))}
             </Row>
+            </Card>
         </>
     )
 }
