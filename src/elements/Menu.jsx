@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, Col, Container, Nav, Navbar, Offcanvas, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import {AiFillHome} from 'react-icons/ai'
 
 const Menu = () => {
 
@@ -8,7 +9,7 @@ const Menu = () => {
 
         <Navbar collapseOnSelect className='navbar navbar-dark bg-success' expand={false}>
             <Container fluid>
-                <Navbar.Brand className='text-light text-center' href="/"><img alt="Responsive" src="https://www.camara.leg.br/tema/assets/images/logo-brand-camara-desktop.png" /></Navbar.Brand>
+                <Navbar.Brand className='text-light text-center' href="/" >  <AiFillHome/> </Navbar.Brand>
                 <Navbar.Toggle className='btn btn-success' aria-controls="offcanvasNavbar" />
                 <Navbar.Offcanvas
                     id="offcanvasNavbar"
@@ -24,7 +25,7 @@ const Menu = () => {
                         <Nav className="text-center" activeKey="/home">
                             <Row>
                                 <Col>
-                                <Card className="bg-success"border="dark">
+                                <Card className="bg-light"border="dark">
                                     <Nav.Item>
                                         <Nav.Link eventKey="2" as={Link} to="/legislaturas">
                                             Legislaturas
@@ -33,7 +34,7 @@ const Menu = () => {
                                 </Card>
                                 </Col>
                                 <Col>
-                                <Card className="bg-success"border="dark">
+                                <Card className="bg-light"border="dark">
                                     <Nav.Item>
                                         <Nav.Link eventKey="1" as={Link} to="/deputados">
                                             Deputados
@@ -42,7 +43,7 @@ const Menu = () => {
                                     </Card>
                                 </Col>
                                 <Col>
-                                <Card className="bg-success"border="dark">
+                                <Card className="bg-light"border="dark">
                                     <Nav.Item>
                                         <Nav.Link eventKey="3" as={Link} to="/partidos">
                                             Partidos
